@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+{%block content%}
+<h1>Please login below</h1>
+{%for mess in get_flashed_messages()%} 
+<p>{{mess}}</p>
+{%endfor%}
+<form method="POST">
+    {{google_form.hidden_tag()}}
+    {{google_form.submit()}}
+</form>
+<br>
+<hr>
+<br>
+<form method="POST">
+    {{form.hidden_tag()}}
+    {{form.email.label}}{{form.email()}}
+    {{form.password.label}}{{form.password()}}
+    {{form.submit()}}
+</form>
+{%endblock%}

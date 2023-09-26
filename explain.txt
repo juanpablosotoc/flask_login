@@ -1,0 +1,11 @@
+The way to implement a complete user system is to 
+either use only oauth for both login and registering and 
+never keeping passwords or only being able to register using 
+internal authentication, saving their passwords and then being 
+able to login with internalk authentication by providing that 
+password or oauth and ensuring that that email belongs to you 
+and be can therefore log you in.
+
+I am going to implement the ladder, a internal auth register system
+meaning i keep a their passwords and an internal and oauth login
+to log them in.

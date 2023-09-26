@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+{%block content%}
+<h1>Please Register below</h1>
+{%for mess in get_flashed_messages()%} 
+<p>{{mess}}</p>
+{%endfor%}
+<form method="POST">
+    {{form.hidden_tag()}}
+    {{form.email.label}}{{form.email()}}
+    {{form.password.label}}{{form.password()}}
+    {{form.password_confirm.label}}{{form.password_confirm()}}
+    {{form.submit()}}
+</form>
+{%endblock%}
